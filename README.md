@@ -1,1 +1,1 @@
-# teedgames.github
+# teedgames
