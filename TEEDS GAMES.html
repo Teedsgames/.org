@@ -2,10 +2,97 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teeds Games</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="icoN.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+        }
+        .navbar .home {
+            position: relative;
+            display: inline-block;
+        }
+        .navbar .home-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .navbar .home-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .navbar .home-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .navbar .home:hover .home-content {
+            display: block;
+        }
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .search-bar input[type="text"] {
+            padding: 6px;
+            margin-right: 8px;
+            font-size: 17px;
+        }
+        .search-bar button {
+            padding: 6px 10px;
+            font-size: 17px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="home">
+            <a href="#" class="home-button">MORE</a>
+            <div class="home-content">
+                <a href="downloads.html"><i class="fas fa-download"></i> Downloads</a>
+                <a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a>
+                <a href="credits.html"><i class="fas fa-info-circle"></i> Credits</a>
+            </div>
+            <a href="download environ.html" class="button">SEARCH FOR OUR GAMES <i class="fas fa-bolt"></i> </a>
+            <a href="tel:+2349075137464" class="button">CALL US <i class="fas fa-spin"></i> </a>
+            <a href="mailto:teedsgames@gmail.com" class="button">MAIL US <i class="fas fa-envelope"></i> </a>
+    <script>
+    </script>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teeds Games</title>
     <link rel="stylesheet" href="stlye.css">
+    <link rel="shortcut icon" href="icoN.png" type="image/x-icon">
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -129,8 +216,6 @@
     <title>Specialization</title>
 </head>
 <body>
-    We are specialized in the creation of games. <p>You can contact us on
-        gmail at teedsgames@gmail.com.Our games are under-development,they shall be coming soon.</p>
 </body>
 </html>
 
@@ -160,8 +245,6 @@
   </head>
   <body>
      <iframe id="backgroundImage" src=""></iframe>
-     Teeds Games will be presenting games that 
-     will suite you
 
 <header>
     FEATURED GAMES
@@ -170,16 +253,36 @@
 <section>
     <h2>Featured Games</h2>
     <p>Discover our tantalizing and breath-taking games!</p>
-    <ul> 
+    We are specialized in the creation of games. <p>You can contact us on
+        gmail at teedsgames@gmail.com.Our games are under-development,they shall be coming soon.</p>
+        Teeds Games will be presenting games that 
+        will suite you
+        <ul> 
     </ul>
 </section>
 <section>
-    <h2>Contact Us</h2>
-    <p>Have a question OR want to sponsor us? Feel free to reach out to us!</p>
-    <p> <a href="mailto:teedsgames@gmail.com">MAIL US</a> </p>
-    <a href="tel:+2349075137464">CALL US</a>
-    <div class="contact-form">
-        <h2>Contact Me</h2>
+  <style>
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .button:hover {
+        background-color: #45a049;
+    }
+    </style>
+                <a href="terms.html" class="footer-btn">Terms of Service</a>
+        <h2>Contact Us</h2>
+        <p>Have a question OR want to sponsor us? Feel free to reach out to us!</p>
     <form action="post.php" method="post">
         <label for="name">Name</label>
         <input type="text" id="name" name="name" required>
@@ -190,8 +293,9 @@
         <label for="message">Message</label>
         <textarea id="message" name="message" rows="4" required></textarea>
 
-        <button type="submit">Send Email</button>
+        <a href="mailto:contact@teedsgames@gmail.com" class="button">Send</a>
     </form>
+    
 </section>
 THANKS
 <footer>

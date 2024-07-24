@@ -37,3 +37,46 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     exit;
 }
 ?>
+
+
+<?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'path/to/PHPMailer/src/Exception.php';
+require 'path/to/PHPMailer/src/PHPMailer.php';
+require 'path/to/PHPMailer/src/SMTP.php';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $message = $_POST["message"];
+
+    $mail = new PHPMailer(true);
+    try {
+        $mail->isSMTP();
+        $mail->Host = 'smtp.example.com';
+        $mail->SMTPAuth = true;
+        $mail->Username = 'your_email@example.com';
+        $mail->Password = 'your_password';
+        $mail->SMTPSecure = 'tls';
+        $mail->Port = 587;
+
+        $mail->setFrom($email, $name);
+        $mail->addAddress('teedsgames@gmail.com');
+        $mail->addReplyTo($email, $name);
+
+        $mail->isHTML(false);
+        $mail->Subject = 'New message from your website';
+        $mail->Body    = "Name: $name\nEmail: $email\n\nMessage:\n$message";
+
+        $mail->send();
+        echo 'Thank you for your message! We will get back to you soon.';
+    } catch (Exception $e) {
+        echo "Oops! Something went wrong and we couldn't send your message. Mailer Error: {$mail->ErrorInfo}";
+    }
+} else {
+    header("Location: your-contact-form-page.php");
+    exit;
+}
+?>
